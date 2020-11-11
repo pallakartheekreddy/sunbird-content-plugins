@@ -285,6 +285,7 @@ angular.module('org.ekstep.sunbirdcommonheader:app', ["Scope.safeApply", "yaru22
             popup: true,
             editMode: $scope.getViewMode()
         })
+        window.parent.postMessage('editContentMeta', '*');
     }
 
     $scope._sendReview = function () {
