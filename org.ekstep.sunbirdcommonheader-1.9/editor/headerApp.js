@@ -503,6 +503,7 @@ angular.module('org.ekstep.sunbirdcommonheader:app', ["Scope.safeApply", "yaru22
         } else {
             window.parent.$('#' + ecEditor.getConfig('modalId')).iziModal('close');
         }
+        window.parent.postMessage('closeEditor', '*');
     }
     $scope.telemetry = function (data) {
         org.ekstep.services.telemetryService.interact({
